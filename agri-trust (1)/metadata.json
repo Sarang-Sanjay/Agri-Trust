@@ -1,0 +1,7 @@
+{
+  "name": "Agri-Trust",
+  "description": "A decentralized trust system for smart agriculture, linking validated farm data directly to consumers and researchers through secure, transparent, cryptographically proven records.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agri-Trust</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar for better aesthetics */
+        html::-webkit-scrollbar {
+            width: 8px;
+        }
+        html::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        html::-webkit-scrollbar-thumb {
+            background: #cbd5e1; /* Tailwind gray-300 */
+            border-radius: 4px;
+        }
+        html::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; /* Tailwind gray-400 */
+        }
+        /* Dark mode scrollbar */
+        html.dark::-webkit-scrollbar-track {
+            background: #1a202c; /* Dark gray */
+        }
+        html.dark::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Darker gray */
+        }
+        html.dark::-webkit-scrollbar-thumb:hover {
+            background: #2d3748; /* Even darker gray */
+        }
+
+        /* Nature/Farm Themed Body Background for Dark Mode */
+        body {
+            background-image: url('https://picsum.photos/seed/farm/1920/1080'); /* Example farm/nature image */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Overlay for readability, blending with dark theme */
+            background-color: #0d1117; /* Very dark background color for blending */
+            background-blend-mode: overlay; /* Blends the image with the background color */
+        }
+        /* Adjust for light mode if it were enabled, to ensure background isn't too dark */
+        html:not(.dark) body {
+            background-color: #f8fafc; /* Tailwind gray-50 equivalent */
+            background-blend-mode: soft-light;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client.js",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.5",
+    "js-sha256": "https://aistudiocdn.com/js-sha256@^0.11.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-sans antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
